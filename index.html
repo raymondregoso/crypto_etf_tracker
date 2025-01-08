@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividend 2025</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <img src="img/logo.png" class="logo" alt="logo">
+            <div class="search-bar">
+                <span class="material-icons-sharp">search</span>
+                <input type="search" placeholder="Search">
+            </div>
+            <div class="profile-area">
+                <div class="theme-btn">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="profile-photo">
+                        <img src="https://i.postimg.cc/KYvH70F8/default-profileimage.png" alt="profile1">
+                    </div>
+                    <h5>RAYMOND</h5>
+                    <span class="material-icons-sharp">expand_more</span>
+                </div>
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+        
+    <!-- Main -->
+    <main>
+        <!-- Sidebar -->
+        <aside>
+            <button id="close-btn">
+                <span class="material-icons-sharp">close</span>
+            </button>
+            <div class="sidebar">
+                <a href="#" class="tab-link active" data-tab="dashboard">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h4>Cryptocurrency Market</h4>
+                </a>
+                <a href="#" class="tab-link" data-tab="exchange">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h4>Chart</h4>
+                </a>
+                <a href="#" class="tab-link" data-tab="etf">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h4>ETF Market</h4>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Dashboard Widget -->
+        <div class="tradingview-widget-container dashboard" style="display: block;">
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+            {
+                "width": "100%",
+                "height": 550,
+                "defaultColumn": "overview",
+                "screener_type": "crypto_mkt",
+                "displayCurrency": "USD",
+                "colorTheme": "light",
+                "locale": "en"
+            }
+            </script>
+        </div>
+
+        <!-- Exchange Widget -->
+        <div class="tradingview-widget-container exchange" style="display: none;">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+                "autosize": true,
+                "symbol": "COINBASE:BTCUSD",
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "light",
+                "style": "1",
+                "locale": "en",
+                "allow_symbol_change": true,
+                "calendar": false,
+                "support_host": "https://www.tradingview.com"
+            }
+            </script>
+        </div>
+
+        <!-- ETF Widget -->
+        <div class="tradingview-widget-container etf" style="display: none;">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+            {
+                "width": "100%",
+                "height": 550,
+                "defaultColumn": "overview",
+                "screener_type": "etf_mkt",
+                "displayCurrency": "USD",
+                "colorTheme": "light",
+                "locale": "en"
+            }
+            </script>
+        </div>
+    </main>
+
+    <!-- Canvas -->
+    <canvas id="chart"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.0/chart.min.js" integrity="sha512-R60W3LgKdvvfwbGbqKusRu/434Snuvr9/Flhtoq9cj1LQ9P4HFKParULqOCAisHk/J4zyaEWWjiWIMuP13vXEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body> 
+
+<!-- Footer -->
+<footer>
+    <!-- TradingView Widget -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+            "symbols": [
+                {
+                    "proName": "FOREXCOM:SPXUSD",
+                    "title": "S&P 500 Index"
+                },
+                {
+                    "proName": "FOREXCOM:NSXUSD",
+                    "title": "US 100 Cash CFD"
+                },
+                {
+                    "proName": "FX_IDC:EURUSD",
+                    "title": "EUR to USD"
+                },
+                {
+                    "proName": "BITSTAMP:BTCUSD",
+                    "title": "Bitcoin"
+                },
+                {
+                    "proName": "BITSTAMP:ETHUSD",
+                    "title": "Ethereum"
+                },
+                {
+                    "description": "Tesla",
+                    "proName": "PYTH:TSLA"
+                }
+            ],
+            "showSymbolLogo": true,
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "colorTheme": "light",
+            "locale": "en"
+        }
+        </script>
+    </div>
+    <p>Copyrights © 2025 NR-Dividends. All rights reserved</p>
+</footer>
+</html>
