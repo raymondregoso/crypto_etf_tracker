@@ -112,55 +112,73 @@
             }
             </script>
         </div>
+
+        <!-- Right Sidebar Advertisement -->
+        <aside class="ads">
+            <div id="ads-container">
+                <h1>Ads here!</h1>
+                <!-- Google AdSense Ad Code -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                    style="display:block; width: 300px; height: 250px;"
+                    data-ad-client="ca-pub-XXXXXX" 
+                    data-ad-slot="XXXXXX"
+                    data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </aside>
+
     </main>
 
     <!-- Canvas -->
     <canvas id="chart"></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.0/chart.min.js" integrity="sha512-R60W3LgKdvvfwbGbqKusRu/434Snuvr9/Flhtoq9cj1LQ9P4HFKParULqOCAisHk/J4zyaEWWjiWIMuP13vXEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
-</body> 
 
-<!-- Footer -->
-<footer>
-    <!-- TradingView Widget -->
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-        {
-            "symbols": [
-                {
-                    "proName": "FOREXCOM:SPXUSD",
-                    "title": "S&P 500 Index"
-                },
-                {
-                    "proName": "FOREXCOM:NSXUSD",
-                    "title": "US 100 Cash CFD"
-                },
-                {
-                    "proName": "FX_IDC:EURUSD",
-                    "title": "EUR to USD"
-                },
-                {
-                    "proName": "BITSTAMP:BTCUSD",
-                    "title": "Bitcoin"
-                },
-                {
-                    "proName": "BITSTAMP:ETHUSD",
-                    "title": "Ethereum"
-                },
-                {
-                    "description": "Tesla",
-                    "proName": "PYTH:TSLA"
-                }
-            ],
-            "showSymbolLogo": true,
-            "isTransparent": false,
-            "displayMode": "adaptive",
-            "colorTheme": "light",
-            "locale": "en"
-        }
-        </script>
-    </div>
-    <p>Copyrights © 2025 NR-Dividends. All rights reserved</p>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <!-- TradingView Widget -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [
+                    {
+                        "proName": "FOREXCOM:SPXUSD",
+                        "title": "S&P 500 Index"
+                    },
+                    {
+                        "proName": "FOREXCOM:NSXUSD",
+                        "title": "US 100 Cash CFD"
+                    },
+                    {
+                        "proName": "FX_IDC:EURUSD",
+                        "title": "EUR to USD"
+                    },
+                    {
+                        "proName": "BITSTAMP:BTCUSD",
+                        "title": "Bitcoin"
+                    },
+                    {
+                        "proName": "BITSTAMP:ETHUSD",
+                        "title": "Ethereum"
+                    },
+                    {
+                        "description": "Tesla",
+                        "proName": "PYTH:TSLA"
+                    }
+                ],
+                "showSymbolLogo": true,
+                "isTransparent": false,
+                "displayMode": "adaptive",
+                "colorTheme": "light",
+                "locale": "en"
+            }
+            </script>
+        </div>
+        <p>Copyrights © 2025 NR-Dividends. All rights reserved</p>
+    </footer>
+</body>
 </html>

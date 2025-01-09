@@ -162,6 +162,7 @@ nav .container{
     position: relative;
     width: 96%;
     margin: 0 auto;
+    overflow: hidden;
 }
 nav img.logo {
     width: 12rem;
@@ -233,6 +234,7 @@ nav .profile-area .profile span{
 nav .profile-area button{
     border: none;
     display: none;
+
 }
 
 /* <!-- aside --> */
@@ -330,100 +332,6 @@ canvas#chart{
 
 
 
-
-/* <!-- investments --> */
-
-main section.right .investments{
-    background: var(--color-white);
-    border-radius: var(--card-border-radius);
-    margin-right: 1rem;
-}
-main section.right .investments img{
-    width: 2.4rem;
-}
-main section.right .investments .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--card-padding);
-    padding-bottom: 0;
-}
-main section.right .investments .header a{
-    display: flex;
-    align-items: center;
-    color: var(--color-primary);
-}
-main section.right .investments .investment{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--card-padding);
-    border-bottom: 1px solid var(--color-light);
-    transition: all 0.3s ease;
-}
-main section.right .investments .investment:last-child{
-    border-bottom: none;
-}
-main section.right .investments .investment:hover{
-    background: var(--color-light);
-    cursor: pointer;
-}
-/* <!-- recent transaction --> */
-main .recent-transactions{
-    margin-top: 2rem;
-    margin-right: 1rem;
-}
-main .recent-transactions img{
-    width: 2.2rem;
-}
-main .recent-transactions .header{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-main .recent-transactions .header a{
-    display: flex;
-    align-items: center;
-    color: var(--color-primary);
-
-}
-main .recent-transactions .transaction{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem var(--card-padding);
-    border-radius: var(--card-border-radius);
-    transition: all 0.3s ease;
-}
-main .recent-transactions .transaction:hover{
-    background: var(--color-white);
-    cursor: pointer;
-}
-main .recent-transactions .transaction .service{
-    display: flex;
-    gap: 1rem;
-}
-main .recent-transactions .transaction .service .icon{
-    padding: var(--padding-2);
-    border-radius: var(--border-radius-1);
-    display: flex;
-    align-items: center;
-}
-main .recent-transactions .transaction .card-details{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-main .recent-transactions .transaction .card-details .card{
-    display: flex;
-    width: 4.6rem;
-    height: 3rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--border-radius-2);
-}
-
-
 footer {
     position: fixed;
     bottom: 0;
@@ -434,6 +342,21 @@ footer {
     padding: 15px 0;
     z-index: 1000; /* Ensure it's on top of other content */
 }
+
+.ads {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 300px; 
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#ads-container {
+    width: 100%;
+}
+
 
 /* responsive for table */
 @media screen and (max-width: 1024px){
@@ -447,6 +370,7 @@ footer {
         display: inline;
         background: transparent;
         color: var(--color-dark);
+        overflow: hidden;
     }
     main{
         grid-template-columns: 1fr;
@@ -508,7 +432,7 @@ footer {
 
 @media screen and (max-width: 600px) {
     nav{
-        width: 106%;
+        width: 100%;
     }
     nav .profile-area {
         gap: 2.6rem;
@@ -516,19 +440,7 @@ footer {
     nav .profile h5,
     nav .profile span {
         display: none;
-    }
-    main section.middle .cards{
-        grid-template-columns: 1fr;
-    }
-    main section.middle .fast-payment{
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 3rem;
-        gap:  1rem;
-    }
-    main .cards{
-        margin-right: 1rem;
-    }
+    
     
 }
     
